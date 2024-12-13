@@ -1,0 +1,2 @@
+Student{name: Б21-103, group: Артём, course: 4, average mark: 4.2}
+Student{name: Б21-103, group: Иван, course: 3, average mark: 3.8}
