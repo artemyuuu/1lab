@@ -6,9 +6,10 @@ public class Student {
     private int course;
     private double averageMark;
 
-    public Student(String group, String name, int course, double averageMark) {
-        this.group = group;
+    public Student(String name, String group, int course, double averageMark) {
         this.name = name;
+        this.group = group;
+
         this.course = course;
         this.averageMark = averageMark;
     }

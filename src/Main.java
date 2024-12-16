@@ -184,10 +184,12 @@ public class Main {
                             Iterator<Student> iterator1 = students.iterator();
                             while (iterator1.hasNext()) {
                                 Student student = iterator1.next();
-                                if (student.getCourse() >= 5) {
-                                    System.out.println("Поздравляем," + student.getName() + "из группы" + student.getGroup() + ", вы выпустились");
+                                if (student.getCourse() == 5) {
+                                    System.out.println("Поздравляем, " + student.getName() + " из группы " + student.getGroup() + ", вы выпустились");
+                                    iterator1.remove();
                                 } else {
                                     System.out.println(student.getName() + ", вы перешли на " + (student.getCourse() + 1) + " курс");
+                                    student.setCourse(student.getCourse()+1);
                                 }
                             }
                             break;
@@ -216,12 +218,12 @@ public class Main {
             return;
         }
 
-        boolean isFound = false; // Флаг, чтобы отследить наличие студентов на указанном курсе
+        boolean isFound = false;
 
         for (Student student : students) {
             if (student.getCourse() == course) {
                 System.out.println(student);
-                isFound = true; // Найден хотя бы один студент
+                isFound = true;
             }
         }
 
